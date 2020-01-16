@@ -1,0 +1,26 @@
+{
+  "name": "node-for-speed-raspberry-drift",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mariusmivw/Node-for-Speed-Raspberry-Drift.git"
+  },
+  "author": "Mariusmivw, SirMorfield, blubvis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mariusmivw/Node-for-Speed-Raspberry-Drift/issues"
+  },
+  "homepage": "https://github.com/Mariusmivw/Node-for-Speed-Raspberry-Drift#readme",
+  "dependencies": {
+    "js-peers": "git+https://github.com/Mariusmivw/js-peers.git",
+    "ws": "^7.2.1"
+  },
+  "devDependencies": {
+    "node-static": "^0.7.11"
+  }
+}
