@@ -1,5 +1,5 @@
 <script src="/js-peers/client.js"></script>
 <script>
-	const pc = new PeerConnection();
+	const pc = new PeerConnection('/peers', location.hostname, 3000);
 	pc.on('test', console.log)
 </script>

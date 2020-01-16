@@ -1,8 +1,9 @@
 const http = require('http');
 const static = require('node-static');
 const file = new static.Server('./');
-const s = http.createServer((req, res)=>file.serve(req, res));
-const ps = require('js-peers')(s);
+const server = http.createServer((req, res)=>file.serve(req, res));
+
+const ps = require('js-peers')(server, '/peers');
 
 let peerId;
 ps.on('connection', (peer)=>{
@@ -13,4 +14,4 @@ ps.on('connection', (peer)=>{
 		console.log('primed')
 	}
 });
-s.listen(3000);
+server.listen(3000);
