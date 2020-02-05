@@ -18,6 +18,9 @@
   "homepage": "https://github.com/Mariusmivw/Node-for-Speed-Raspberry-Drift#readme",
   "dependencies": {
     "js-peers": "git+https://github.com/Mariusmivw/js-peers.git",
+    "pigpio": "^3.0.0",
+    "pwm": "0.0.3",
+    "raspi-soft-pwm": "^6.0.2",
     "ws": "^7.2.1"
   },
   "devDependencies": {

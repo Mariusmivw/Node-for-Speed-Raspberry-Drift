@@ -1,5 +1,16 @@
 <script src="/js-peers/client.js"></script>
 <script>
 	const pc = new PeerConnection('/peers', location.hostname, 3000);
-	pc.on('test', console.log)
+	pc.on('test', ()=>{
+		const remoteStream = new MediaStream(pc._peerConnection.getReceivers().map(receiver=>receiver.track));
+		const video = document.createElement('video');
+		video.srcObject = remoteStream;
+		document.body.appendChild(video);
+	});
+
+	const { close } = pc._peerConnection;
+	pc._peerConnection.close = function () {
+		video.srcObject = null;
+		return close.apply(this, arguments);
+	}
 </script>

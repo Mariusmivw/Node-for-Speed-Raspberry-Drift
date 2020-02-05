@@ -4,6 +4,7 @@ const file = new static.Server('./');
 const server = http.createServer((req, res)=>file.serve(req, res));
 
 const ps = require('js-peers')(server, '/peers');
+require('./streamVideo');
 
 let peerId;
 ps.on('connection', (peer)=>{
